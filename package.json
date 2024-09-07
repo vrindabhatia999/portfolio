@@ -18,7 +18,8 @@
   },
   "scripts": {
     "dev": "next",
-    "build": "next build",
+    "install:force": "npm install --force",
+    "build": "npm run install:force && next build",
     "start": "next start",
     "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest",
     "deploy": "npx vercel --prod"
